@@ -87,8 +87,15 @@ client.connect(err => {
             })
     })
 
+    // app.get("/bookings", (req, res) => {
+    //     bookingsCollection.find({})
+    //         .toArray((err, items) => {
+    //             res.send(items);
+    //         })
+    // })
+
     app.delete("/delete/:id", (req, res) => {
-        bookingsCollection.deleteOne({ _id: ObjectID(req.params.id) })
+        servicesCollection.deleteOne({ _id: ObjectID(req.params.id) })
             .then(result => {
             })
     })
